@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HEALTHY BCAFF — Healthy Bakery & Caffe</title>
+  <meta name="description" content="Healthy BCAFF by Keyra Aisyah Arafat — healthy bakery, dessert, snack, makanan & minuman sehat." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient BGM (original/royalty-free, generated) -->
+  <audio id="bgm" src="assets/audio/backsound.wav" loop></audio>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+        <span class="logo">HB</span>
+        <div class="brand-text">
+          <strong>HEALTHY BCAFF</strong>
+          <small>by Keyra Aisyah Arafat</small>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="#menu">Menu</a>
+        <a href="#about">Tentang</a>
+        <a href="#contact">Kontak</a>
+        <button class="btn ghost" id="toggle-audio" aria-label="Toggle BGM">♫</button>
+        <button class="btn cart-btn" id="open-cart" aria-label="Buka Keranjang">
+          Keranjang <span class="badge" id="cart-count">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero Slider -->
+    <section class="hero">
+      <div class="slider" id="slider">
+        <div class="slide is-active" style="--bg:url('assets/images/slide1.png')">
+          <div class="slide-content">
+            <h1>Fresh • Light • Healthy</h1>
+            <p>Dessert, snack, makanan & minuman sehat — tanpa ribet.</p>
+            <a href="#menu" class="btn primary">Lihat Menu</a>
+          </div>
+        </div>
+        <div class="slide" style="--bg:url('assets/images/slide2.png')">
+          <div class="slide-content">
+            <h1>Whole Ingredients</h1>
+            <p>Manis seimbang, bahan alami, rasa maks.</p>
+            <a href="#menu" class="btn outline">Belanja Sekarang</a>
+          </div>
+        </div>
+        <div class="slide" style="--bg:url('assets/images/slide3.png')">
+          <div class="slide-content">
+            <h1>Gluten-Lite Options</h1>
+            <p>Pilihan rendah gula & gluten-friendly.</p>
+            <a href="#about" class="btn ghost">Kenali Kami</a>
+          </div>
+        </div>
+        <button class="control prev" id="prev-slide" aria-label="Slide Sebelumnya">‹</button>
+        <button class="control next" id="next-slide" aria-label="Slide Selanjutnya">›</button>
+      </div>
+    </section>
+
+    <!-- Menu Grid -->
+    <section id="menu" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2 class="title">Menu Sehat Pilihan</h2>
+          <p class="subtitle">Dessert • Snack • Makanan • Minuman</p>
+          <div class="filters">
+            <input type="search" id="search" placeholder="Cari menu... (misal: granola, matcha)" />
+            <select id="category">
+              <option value="all">Semua Kategori</option>
+              <option value="dessert">Dessert</option>
+              <option value="snack">Snack</option>
+              <option value="makanan">Makanan</option>
+              <option value="minuman">Minuman</option>
+            </select>
+          </div>
+        </header>
+
+        <div id="product-grid" class="grid"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section alt">
+      <div class="container about">
+        <div class="about-text">
+          <h2 class="title">Tentang HEALTHY BCAFF</h2>
+          <p>
+            Kami adalah bakery & caffe sehat milik <strong>Keyra Aisyah Arafat</strong>.
+            Misi kami sederhana: menghadirkan camilan & makanan sehat yang tetap menggugah selera.
+            Kami memilih bahan-bahan utuh, mengontrol gula, dan mengutamakan rasa.
+          </p>
+          <ul class="bullets">
+            <li>Bahan alami & real food</li>
+            <li>Rendah gula — manis cerdas</li>
+            <li>Opsi nabati & gluten-friendly</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <h3 class="card-title">Jam Buka</h3>
+          <p>Senin–Minggu • 08.00–21.00 WIB</p>
+          <h3 class="card-title">Lokasi</h3>
+          <p>Online & pop-up store (DM untuk jadwal)</p>
+          <a href="#contact" class="btn primary w100">Hubungi Kami</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container contact">
+        <div>
+          <h2 class="title">Kontak</h2>
+          <p>Instagram/TikTok: @healthybcaff • WhatsApp: 08xx-xxxx-xxxx</p>
+          <p>Email: hello@healthybcaff.com</p>
+        </div>
+        <form id="checkout-form" class="checkout-form">
+          <h3 class="card-title">Checkout Cepat</h3>
+          <input type="text" id="cust-name" placeholder="Nama lengkap" required />
+          <input type="tel" id="cust-phone" placeholder="No. WhatsApp" required />
+          <input type="text" id="cust-address" placeholder="Alamat pengiriman" required />
+          <button type="submit" class="btn primary w100">Checkout Sekarang</button>
+          <small>Catatan: ini simulasi checkout. Anda akan mendapatkan ringkasan di layar & bisa diunduh.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 HEALTHY BCAFF — Healthy Bakery & Caffe. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside id="cart-drawer" class="cart-drawer">
+    <div class="drawer-head">
+      <h3>Keranjang</h3>
+      <button id="close-cart" class="btn ghost">✕</button>
+    </div>
+    <div id="cart-items" class="drawer-body"></div>
+    <div class="drawer-foot">
+      <div class="totals">
+        <span>Total:</span>
+        <strong id="cart-total">Rp0</strong>
+      </div>
+      <div class="drawer-actions">
+        <button class="btn outline" id="clear-cart">Hapus</button>
+        <button class="btn primary" id="go-checkout">Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script>window.APP_COLORS = {"fresh_freesia": "#F4E6FF", "pretty_in_pink": "#FFC0CB", "blueberry_bushel": "#3A5DAE"};</script>
+  <script src="script.js"></script>
+</body>
+</html>
